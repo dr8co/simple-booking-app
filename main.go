@@ -81,16 +81,28 @@ func getUserInput() (string, string, string, uint) {
 	// Ask the user their info and how many tickets they would like to order.
 
 	fmt.Println("Enter your first name: ")
-	fmt.Scan(&firstName)
+	_, err := fmt.Scan(&firstName)
+	if err != nil {
+		return "", "", "", 0
+	}
 
 	fmt.Println("Enter your last name: ")
-	fmt.Scan(&lastName)
+	_, err = fmt.Scan(&lastName)
+	if err != nil {
+		return "", "", "", 0
+	}
 
 	fmt.Println("Enter your email address: ")
-	fmt.Scan(&email)
+	_, err = fmt.Scan(&email)
+	if err != nil {
+		return "", "", "", 0
+	}
 
 	fmt.Println("Enter number of tickets: ")
-	fmt.Scan(&userTickets)
+	_, err = fmt.Scan(&userTickets)
+	if err != nil {
+		return "", "", "", 0
+	}
 
 	return firstName, lastName, email, userTickets
 }
