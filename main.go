@@ -34,6 +34,11 @@ func main() {
 		fmt.Println("Enter number of tickets: ")
 		fmt.Scan(&userTickets)
 
+		if userTickets > remainingTickets {
+			fmt.Printf("We only have %v tickets remaining, so you can't book %v tickets.\n", remainingTickets, userTickets)
+			break
+		}
+
 		remainingTickets -= userTickets
 		bookings = append(bookings, firstName+" "+lastName)
 
@@ -44,6 +49,12 @@ func main() {
 		for _, booking := range bookings {
 			var names = strings.Fields(booking)
 			println(names[0])
+		}
+
+		if remainingTickets == 0 {
+			// end program
+			fmt.Println("Our conference is booked out. Come back next year.")
+			break
 		}
 
 	}
