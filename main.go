@@ -13,6 +13,8 @@ func main() {
 	var userName string
 	var userTickets int
 
+	// TODO: ask user their name and how many tickets they would like to order.
+
 	userName = "Ian"
 	userTickets = 2
 	fmt.Printf("User %v booked %v tickets", userName, userTickets)
