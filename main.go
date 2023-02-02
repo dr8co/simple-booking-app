@@ -7,9 +7,11 @@ import (
 
 const conferenceTickets = 50
 
-var conferenceName = "Go Conference"
-var remainingTickets uint = 50
-var bookings []string
+var (
+	conferenceName        = "Go Conference"
+	remainingTickets uint = 50
+	bookings         []string
+)
 
 func main() {
 	greetUsers()
@@ -69,10 +71,12 @@ func validateUserInput(firstName string, lastName string, email string, userTick
 }
 
 func getUserInput() (string, string, string, uint) {
-	var firstName string
-	var lastName string
-	var email string
-	var userTickets uint
+	var (
+		firstName   string
+		lastName    string
+		email       string
+		userTickets uint
+	)
 
 	// Ask the user their info and how many tickets they would like to order.
 
