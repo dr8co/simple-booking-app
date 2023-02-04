@@ -1,10 +1,17 @@
-<h1 align="center">Simple Booking App:</h1>
+<h1 align="center">Simple Booking App</h1>
 <h2 align="center">An Introduction to Go Programming Language (Golang)</h2>
 
 
 <p align="center">
-<img alt="gopher" src="./media/gopher-2.png" title="Golang" width="600" height="817"/>
+<img alt="Golang" src="./media/gopher-2.png" title="Gopher" width="600" height="817"/>
 </p>
+
+## Table of Contents
+<!-- TOC -->
+  * [About](#about)
+  * [Concepts Learned](#concepts-learned)
+  * [Acknowledgement](#acknowledgement)
+<!-- TOC -->
 
 ## About
 
