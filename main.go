@@ -81,7 +81,7 @@ func getUserInput() (string, string, string, uint) {
 		userTickets uint
 	)
 
-	// Ask the user their info and how many tickets they would like to order.
+	// Ask the user their info and how many tickets they'd like to order.
 
 	fmt.Println("Enter your first name: ")
 	_, err := fmt.Scan(&firstName)
