@@ -1,3 +1,4 @@
+<!--suppress HtmlDeprecatedAttribute -->
 <h1 align="center">Simple Booking App</h1>
 <h2 align="center">An Introduction to Go Programming Language (Golang)</h2>
 
