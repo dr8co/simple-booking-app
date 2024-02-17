@@ -46,23 +46,32 @@ func main() {
 				break
 			}
 		} else {
-			if !isValidName {
-				fmt.Println("The first name or last name you entered is too short.")
-			}
-			if !isValidEmail {
-				fmt.Println("The email address you entered doesn't contain @ sign.")
-			}
-			if !isValidTicketNumber {
-				fmt.Println("The number of tickets you entered is invalid.")
+			switch {
+			case !isValidName:
+				sendUnvalidatedUserInputMessage(1)
+			case !isValidEmail:
+				sendUnvalidatedUserInputMessage(2)
+			case !isValidTicketNumber:
+				sendUnvalidatedUserInputMessage(3)
 			}
 		}
 	}
 	wg.Wait()
 }
 
+func sendUnvalidatedUserInputMessage(error_code int) {
+	switch error_code {
+	case 1:
+		fmt.Println("The first name or last name you entered is too short.")
+	case 2:
+		fmt.Println("The email address you entered doesn't contain @ sign.")
+	case 3:
+		fmt.Println("The number of tickets you entered is invalid.")
+	}
+}
+
 func greetUsers() {
-	fmt.Printf("Welcome to %v booking application\n", conferenceName)
-	fmt.Printf("We have a total of %v tickets and %v are still available.\n", conferenceTickets, remainingTickets)
+	fmt.Printf("Welcome to %v booking application\nWe have a total of %v tickets and %v are still available.\n", conferenceName, conferenceTickets, remainingTickets)
 }
 
 func getFirstNames() []string {
